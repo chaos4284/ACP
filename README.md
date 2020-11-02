@@ -19,8 +19,8 @@
     TP Call Time = 5ms    
     if(timer5ms == set)
     {
-      timer5ms = clear;
-  	  ProcessComTask(); // COM TASK
-   	  SendTpTask(); // TP TASK
-   	  TimerTpTask(); // TP TASK
+        timer5ms = clear;
+        ProcessComTask(); // COM TASK
+        SendTpTask(); // TP TASK
+        TimerTpTask(); // TP TASK
     }
