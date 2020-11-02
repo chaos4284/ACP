@@ -14,6 +14,7 @@
 ### 2.3 Porting 
 - Include the file created in 2.1 and the BSW code in 2.2 in your project.
 - The following is called according to the calling time of COM and TP set in 2.2 Call.
+```C    
     ex) COM Call Time = 5ms
     TP Call Time = 5ms    
     if(timer5ms == set)
