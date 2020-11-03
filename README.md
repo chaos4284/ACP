@@ -42,4 +42,17 @@
            ..
         SendRawDataConfirm((CAN1->sTxMailBox[mailBoxIndex].TIR) >> 21,Data); //passing transmitted CAN ID and CAN DATA
    }
-```   
+```  
+
+- Implement the actual CAN transmission function in the SendRawData() function in interface_hook.c.
+```C
+   ex) Here in the porting source..
+   src/inteface/user/interace_hook.c
+   uint8_t SendRawData(uint32_t msgID, uint8_t protocolDLC, uint8_t *protocolData)
+   {
+       uint8_t ret = 0;
+       /*Implement Transmit Code(Return Success = 1, Fail = 0)*/
+       ret = setSendRequest(msgID,protocolDLC,protocolData); // Actual CAN transmission function
+       return ret;
+   }
+```     
