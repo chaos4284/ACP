@@ -35,14 +35,9 @@
            ..
         ReceiveRawData(RxMessage.StdId,RxMessage.Data); //passing received CAN ID and CAN DATA
    }
+
    
-   void CAN1_RX0_IRQHandler(void) // CAN receive ISR
-   {
-           ..
-        ReceiveRawData(RxMessage.StdId,RxMessage.Data); //passing received CAN ID and CAN DATA
-   }
-   
-   void CAN1_TX_IRQHandler(void)
+   void CAN1_TX_IRQHandler(void) // CAN transmission completion confirmation ISR
    {
            ..
         SendRawDataConfirm((CAN1->sTxMailBox[mailBoxIndex].TIR) >> 21,Data); //passing transmitted CAN ID and CAN DATA
