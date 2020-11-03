@@ -26,7 +26,7 @@
     }
 ```
 
--  Function ReceiveRawData() and SendRawDataConfirm() in interface_hook.c, Generated Code in 2.1, is called from CAN transmission completion confirmation or ISR.
+-  Function ReceiveRawData() and SendRawDataConfirm() in interface_hook.c, generated code in 2.1, is called from CAN transmission completion confirmation or ISR.
 ```C
    ex) Here in the porting source..
    src/stm32f4xx_it.c
